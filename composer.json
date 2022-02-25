@@ -1,0 +1,14 @@
+{
+    "name": "hugandoro/opp_dosquebradas",
+    "description": "Aplicativo de apoyo Observatorio Politicas Públicas Municipales",
+    "type": "project",
+    "authors": [
+        {
+            "name": "hugandoro",
+            "email": "hugandoro@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "dev-master"
+    }
+}
