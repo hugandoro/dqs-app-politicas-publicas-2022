@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-sm-3">
                     <input type="checkbox" value="Primera infancia" name="primera_infancia" <?php if ($planilla->primera_infancia !='') echo "checked"; ?>>
-                    <label>Primera infancia</label>
+                    <label>PIIA</label>
                 </div>
                 <div class="col-sm-3">
                     <input type="checkbox" value="Juventudes" name="juventudes" <?php if ($planilla->juventudes !='') echo "checked"; ?>>
