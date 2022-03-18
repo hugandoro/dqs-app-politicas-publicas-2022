@@ -1,7 +1,7 @@
 <!-- Vista para pantalla de login -->
 <div class="row">
     <div class="col-md-12">
-        <h2 align="Center">Datos generales de la planilla</h2>
+        <h2 align="Center"><b>Datos generales de la planilla</b></h2>
     </div>
 </div>
 
@@ -56,23 +56,21 @@
 
 
     <div class="col-md-12">
-        <h3 align="Center">Listado de asistentes registrados</h3>
+        <h3 align="Center"><b>Listado de asistentes registrados ( <?php echo count($listadoAsistentes); ?> )</b></h3><br>
 
-        <table class="table">
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col">Identificacion</th>
-                    <th scope="col">Nombres</th>
-                    <th scope="col">Apellidos</th>
-                    <th scope="col">Comuna</th>
-                    <th scope="col">Direccion</th>
-                    <th scope="col">Zona</th>
-                    <th scope="col">Telefono</th>
-                    <th scope="col">Edad</th>
-                    <th scope="col">Genero</th>
-                    <th scope="col"></th>
+        <table class="table table-bordered">
+                <tr bgcolor="#58D68D">
+                    <td><b>Identificacion</b></td>
+                    <td><b>Nombres</b></td>
+                    <td><b>Apellidos</b></td>
+                    <td><b>Comuna</b></td>
+                    <td><b>Direccion</b></td>
+                    <td><b>Zona</b></td>
+                    <td><b>Telefono</b></td>
+                    <td><b>Edad</b></td>
+                    <td><b>Genero</b></td>
+                    <td></td>
                 </tr>
-            </thead>
             <tbody>
                 <?php foreach ($listadoAsistentes as $r){ ?>
 

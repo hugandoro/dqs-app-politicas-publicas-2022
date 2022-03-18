@@ -105,7 +105,12 @@
                     $asistente_apellido1 = $ficha_sisben->apellido_1;
                     $asistente_apellido2 = $ficha_sisben->apellido_2;
                     $asistente_direccion = $ficha_sisben->direccion;
-                    $asistente_comuna = $ficha_sisben->comuna;
+
+                    if (($ficha_sisben->comuna > 0) && ($ficha_sisben->comuna < 13))
+                        $asistente_comuna = "Comuna " . $ficha_sisben->comuna;
+                    else
+                        $asistente_comuna = '';
+
                     $asistente_telefono = $ficha_sisben->telefono;
                     $asistente_edad = $ficha_sisben->edad;
                     $asistente_correo = '';

@@ -22,6 +22,7 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado - Para bo
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
 </head>
 
 <body>
