@@ -158,7 +158,7 @@ class PlanillasController{
         if(is_null($planilla->planilla_bilinguismo)) $planilla->planilla_bilinguismo = '';
         if(is_null($planilla->planilla_rendicion_cuentas)) $planilla->planilla_rendicion_cuentas = '';
 
-        $planilla->planilla_usuario_id = '10031210';
+        $planilla->planilla_usuario_id = $this->auth->usuario()->identificacion;
 
         $this->modelPlanilla->Actualizar($planilla);
 
