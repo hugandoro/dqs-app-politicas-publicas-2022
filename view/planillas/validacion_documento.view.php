@@ -144,22 +144,22 @@
             ?>
 
             <div class="form-group col-md-3" style="display: block;">
-                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="nombre1" placeholder="" required value="<?php echo $asistente_nombre1; ?>" autocomplete="off" />
+                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="nombre1" placeholder="" required value="<?php echo $asistente_nombre1; ?>" autocomplete="off" onKeyUp="this.value=this.value.toUpperCase()" />
                 <small id="emailHelp" class="form-text text-muted">Primer nombre</small><br><br>
             </div>
 
             <div class="form-group col-md-3" style="display: block;">
-                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="nombre2" placeholder="" value="<?php echo $asistente_nombre2; ?>" autocomplete="off" />
+                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="nombre2" placeholder="" value="<?php echo $asistente_nombre2; ?>" autocomplete="off" onKeyUp="this.value=this.value.toUpperCase()" />
                 <small id="emailHelp" class="form-text text-muted">Segundo nombre</small><br><br>
             </div>
 
             <div class="form-group col-md-3" style="display: block;">
-                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="apellido1" placeholder="" required value="<?php echo $asistente_apellido1; ?>" autocomplete="off" />
+                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="apellido1" placeholder="" required value="<?php echo $asistente_apellido1; ?>" autocomplete="off" onKeyUp="this.value=this.value.toUpperCase()" />
                 <small id="emailHelp" class="form-text text-muted">Primer apellido</small><br><br>
             </div>
 
             <div class="form-group col-md-3" style="display: block;">
-                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="apellido2" placeholder="" value="<?php echo $asistente_apellido2; ?>" autocomplete="off" />
+                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="apellido2" placeholder="" value="<?php echo $asistente_apellido2; ?>" autocomplete="off" onKeyUp="this.value=this.value.toUpperCase()" />
                 <small id="emailHelp" class="form-text text-muted">Segundo apellido</small><br><br>
             </div>
 
@@ -169,7 +169,7 @@
             </div>
 
             <div class="form-group col-md-2" style="display: block;">
-                <input type="email" class="form-control form-control-lg" style="font-size: 10pt;" name="correo" placeholder="" value="<?php echo $asistente_correo; ?>" autocomplete="off" />
+                <input type="email" class="form-control form-control-lg" style="font-size: 10pt;" name="correo" placeholder="" value="<?php echo $asistente_correo; ?>" autocomplete="off" onKeyUp="this.value=this.value.toUpperCase()" />
                 <small id="emailHelp" class="form-text text-muted">Correo electronico</small><br><br>
             </div>
 
@@ -193,7 +193,7 @@
             </div>
 
             <div class="form-group col-md-3" style="display: block;">
-                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="direccion" placeholder="" required value="<?php echo $asistente_direccion; ?>" autocomplete="off" />
+                <input type="text" class="form-control form-control-lg" style="font-size: 10pt;" name="direccion" placeholder="" required value="<?php echo $asistente_direccion; ?>" autocomplete="off" onKeyUp="this.value=this.value.toUpperCase()" />
                 <small id="emailHelp" class="form-text text-muted">Direccion</small><br><br>
             </div>
 

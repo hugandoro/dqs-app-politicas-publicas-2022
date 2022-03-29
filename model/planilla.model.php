@@ -19,6 +19,13 @@ class Planilla
 	public $planilla_adulto_mayor = '';
 	public $planila_usuario_id = '';
 
+	public $planilla_habitante_calle = '';
+	public $planilla_vendedor_informal = '';
+	public $planilla_libertad_religiosa = '';
+	public $planilla_diversidad_sexual = '';
+	public $planilla_bilinguismo = '';
+	public $planilla_rendicion_cuentas = '';
+
 	// Metodo para iniciar el constructor
 	public function __CONSTRUCT()
 	{
@@ -35,8 +42,11 @@ class Planilla
 	{
 		try {
 
-			$sql = "INSERT INTO planillas (fecha, titulo, descripcion, lugar, equidad_de_genero, discapacidad, seguridad_y_convivencia, primera_infancia, juventudes, presupuesto_participativo, migraciones, adulto_mayor, usuario_id) 
-		        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO planillas (fecha, titulo, descripcion, lugar, equidad_de_genero, 
+			discapacidad, seguridad_y_convivencia, primera_infancia, juventudes, 
+			presupuesto_participativo, migraciones, adulto_mayor, usuario_id, 
+			habitante_calle, vendedor_informal, libertad_religiosa, diversidad_sexual, bilinguismo, rendicion_cuentas) 
+		        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 			$this->pdo->prepare($sql)
 				->execute(
@@ -53,7 +63,14 @@ class Planilla
 						$data->planilla_presupuesto_participativo,
 						$data->planilla_migraciones,
 						$data->planilla_adulto_mayor,
-						$data->planilla_usuario_id
+						$data->planilla_usuario_id,
+
+						$data->planilla_habitante_calle,
+						$data->planilla_vendedor_informal,
+						$data->planilla_libertad_religiosa,
+						$data->planilla_diversidad_sexual,
+						$data->planilla_bilinguismo,
+						$data->planilla_rendicion_cuentas
 					)
 				);
 		} catch (Exception $e) {
@@ -108,7 +125,13 @@ class Planilla
 						presupuesto_participativo	= ?,
 						migraciones					= ?,
 						adulto_mayor				= ?,
-						usuario_id					= ?
+						usuario_id					= ?,
+						habitante_calle				= ?,
+						vendedor_informal			= ?,
+						libertad_religiosa			= ?,
+						diversidad_sexual			= ?,
+						bilinguismo					= ?,
+						rendicion_cuentas			= ?
 
 				    WHERE id = ?";
 
@@ -128,6 +151,14 @@ class Planilla
 						$data->planilla_migraciones,
 						$data->planilla_adulto_mayor,
 						$data->planilla_usuario_id,
+
+						$data->planilla_habitante_calle,
+						$data->planilla_vendedor_informal,
+						$data->planilla_libertad_religiosa,
+						$data->planilla_diversidad_sexual,
+						$data->planilla_bilinguismo,
+						$data->planilla_rendicion_cuentas,
+
                         $data->planilla_id //No se debe sobreescribir, se usa para ubicar el registro a modificar
 					)
 				);

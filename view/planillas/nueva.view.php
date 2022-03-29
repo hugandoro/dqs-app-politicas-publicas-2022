@@ -61,6 +61,31 @@
                     <input type="checkbox" value="Adulto mayor" name="adulto_mayor">
                     <label>Adulto mayor</label>
                 </div>
+
+                <div class="col-sm-3">
+                    <input type="checkbox" value="Habitante de calle" name="habitante_calle">
+                    <label>Habitante de calle (C)</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" value="Vendedor informal" name="vendedor_informal">
+                    <label>Vendedor informal (C)</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" value="Libertad religiosa" name="libertad_religiosa">
+                    <label>Libertad religiosa (C)</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" value="Diversidad sexual" name="diversidad_sexual">
+                    <label>Diversidad sexual (C)</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" value="Bilingüismo" name="bilinguismo">
+                    <label>Bilingüismo (C)</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" value="Rendicion de cuentas" name="rendicion_cuentas">
+                    <label>Rendicion de cuentas (E)</label>
+                </div>
                 </fieldset>
 
                 <small id="emailHelp" class="form-text text-muted">Seleccione las políticas públicas vinculadas a esta actividad</small>

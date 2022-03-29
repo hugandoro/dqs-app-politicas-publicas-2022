@@ -75,7 +75,21 @@ class PlanillasController{
         if(is_null($planilla->planilla_migraciones)) $planilla->planilla_migraciones = '';
         if(is_null($planilla->planilla_adulto_mayor)) $planilla->planilla_adulto_mayor = '';
 
-        $planilla->planilla_usuario_id = '10031210';
+        $planilla->planilla_habitante_calle = $_REQUEST['habitante_calle'];
+        $planilla->planilla_vendedor_informal = $_REQUEST['vendedor_informal'];
+        $planilla->planilla_libertad_religiosa = $_REQUEST['libertad_religiosa'];
+        $planilla->planilla_diversidad_sexual = $_REQUEST['diversidad_sexual'];
+        $planilla->planilla_bilinguismo = $_REQUEST['bilinguismo'];
+        $planilla->planilla_rendicion_cuentas = $_REQUEST['rendicion_cuentas'];
+
+        if(is_null($planilla->planilla_habitante_calle)) $planilla->planilla_habitante_calle = '';
+        if(is_null($planilla->planilla_vendedor_informal)) $planilla->planilla_vendedor_informal = '';
+        if(is_null($planilla->planilla_libertad_religiosa)) $planilla->planilla_libertad_religiosa = '';
+        if(is_null($planilla->planilla_diversidad_sexual)) $planilla->planilla_diversidad_sexual = '';
+        if(is_null($planilla->planilla_bilinguismo)) $planilla->planilla_bilinguismo = '';
+        if(is_null($planilla->planilla_rendicion_cuentas)) $planilla->planilla_rendicion_cuentas = '';
+
+        $planilla->planilla_usuario_id = $this->auth->usuario()->identificacion;
 
         $planilla->planilla_id = $this->modelPlanilla->Registrar($planilla); //Registra y recibe el ID del nuevo registro
 
@@ -129,6 +143,20 @@ class PlanillasController{
         if(is_null($planilla->planilla_presupuesto_participativo)) $planilla->planilla_presupuesto_participativo = '';
         if(is_null($planilla->planilla_migraciones)) $planilla->planilla_migraciones = '';
         if(is_null($planilla->planilla_adulto_mayor)) $planilla->planilla_adulto_mayor = '';
+
+        $planilla->planilla_habitante_calle = $_REQUEST['habitante_calle'];
+        $planilla->planilla_vendedor_informal = $_REQUEST['vendedor_informal'];
+        $planilla->planilla_libertad_religiosa = $_REQUEST['libertad_religiosa'];
+        $planilla->planilla_diversidad_sexual = $_REQUEST['diversidad_sexual'];
+        $planilla->planilla_bilinguismo = $_REQUEST['bilinguismo'];
+        $planilla->planilla_rendicion_cuentas = $_REQUEST['rendicion_cuentas'];
+
+        if(is_null($planilla->planilla_habitante_calle)) $planilla->planilla_habitante_calle = '';
+        if(is_null($planilla->planilla_vendedor_informal)) $planilla->planilla_vendedor_informal = '';
+        if(is_null($planilla->planilla_libertad_religiosa)) $planilla->planilla_libertad_religiosa = '';
+        if(is_null($planilla->planilla_diversidad_sexual)) $planilla->planilla_diversidad_sexual = '';
+        if(is_null($planilla->planilla_bilinguismo)) $planilla->planilla_bilinguismo = '';
+        if(is_null($planilla->planilla_rendicion_cuentas)) $planilla->planilla_rendicion_cuentas = '';
 
         $planilla->planilla_usuario_id = '10031210';
 
