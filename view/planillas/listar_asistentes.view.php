@@ -139,7 +139,7 @@
 
 <hr>
 
-<script src="../node_modules/chart.js/dist/chart.js"></script>
+<script src="node_modules/chart.js/dist/chart.js"></script>
 
 <!-- GRAFICA N° 1 - DISTRIBUCION POR COMUNAS -->
 <script>
