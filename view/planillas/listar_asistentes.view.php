@@ -2,6 +2,7 @@
 <div class="row">
     <div class="col-md-12">
         <h2 align="Center">Datos generales de la planilla</h2>
+        <h3 align="Center"><b><?php echo count($listadoAsistentes); ?></b> asistentes registrados </h3>
     </div>
 </div>
 
@@ -24,7 +25,7 @@
         <b><?php echo "Lugar de realizacion" ?></b>
     </div>
     <div class="col-md-2">
-        <b><?php echo "Politica impactada" ?></b>
+        <b><?php echo "Politica(s) impactada(s)" ?></b>
     </div>
 
     <div class="col-md-2">
@@ -48,14 +49,22 @@
     </div>
 
     <div class="col-md-2">
-        <?php if ($planilla->politica == "1") echo "Equidad de genero"; ?>
-        <?php if ($planilla->politica == "2") echo "Discapacidad"; ?>
-        <?php if ($planilla->politica == "3") echo "Seguridad y convivencia"; ?>
-        <?php if ($planilla->politica == "4") echo "Primera infancia"; ?>
-        <?php if ($planilla->politica == "5") echo "Juventudes"; ?>
-        <?php if ($planilla->politica == "6") echo "Presupuesto participativo"; ?>
-        <?php if ($planilla->politica == "7") echo "Migraciones"; ?>
-        <?php if ($planilla->politica == "8") echo "Adulto mayor"; ?>
+        <?php
+        echo $planilla->equidad_de_genero . " ";
+        echo $planilla->discapacidad . " ";
+        echo $planilla->seguridad_y_convivencia . " ";
+        echo $planilla->primera_infancia . " ";
+        echo $planilla->juventudes . " ";
+        echo $planilla->presupuesto_participativo . " ";
+        echo $planilla->migraciones . " ";
+        echo $planilla->adulto_mayor . " ";
+        echo $planilla->habitante_calle . " ";
+        echo $planilla->vendedor_informal . " ";
+        echo $planilla->libertad_religiosa . " ";
+        echo $planilla->diversidad_sexual . " ";
+        echo $planilla->bilinguismo . " ";
+        echo $planilla->rendicion_cuentas . " ";
+         ?>
     </div>
 
 </div>

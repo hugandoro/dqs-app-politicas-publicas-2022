@@ -213,7 +213,7 @@ class PlanillasController{
             if ($r->comuna == "Las Marcadas") $contadorComuna[14] = $contadorComuna[14] + 1;
             if ($r->comuna == "Otro municipio") $contadorComuna[15] = $contadorComuna[15] + 1;
 
-            if ($r->zona == "Urbana") $contadorZona[0] = $contadorZona[0] + 1;
+            if ($r->zona == "Urbuna") $contadorZona[0] = $contadorZona[0] + 1;
             if ($r->zona == "Rural") $contadorZona[1] = $contadorZona[1] + 1;
 
             if ($r->genero == "Masculino") $contadorGenero[0] = $contadorGenero[0] + 1;
