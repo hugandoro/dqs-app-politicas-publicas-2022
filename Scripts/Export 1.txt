@@ -1,0 +1,27 @@
+// Seleccionar todos los asistentes de una planilla
+
+SELECT 
+a.*
+
+FROM ciudadanos AS a
+
+INNER JOIN ciudadano_planilla AS b
+ON a.identificacion= b.ciudadano_identificacion
+
+WHERE b.planilla_id = 33
+
+
+
+//Filtrado por determinados campos
+
+SELECT 
+a.identificacion,
+a.contratistas,
+a.estudiantes
+
+FROM ciudadanos AS a
+
+INNER JOIN ciudadano_planilla AS b
+ON a.identificacion= b.ciudadano_identificacion
+
+WHERE b.planilla_id = 33

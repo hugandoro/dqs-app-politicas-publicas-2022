@@ -189,6 +189,70 @@ class PlanillasController{
 
         // Obtiene los datos de los ciudadanos (Asistentes) - Planilla
         $listadoAsistentes = $this->modelPlanilla->listarAsistencia($_REQUEST['id']);
+
+        // Obtiene datos consolidados para GRAFICAS ESTADISTICAS
+        $contadorComuna = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        $contadorCaracterizacion = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        $contadorZona = array(0, 0);
+        $contadorGenero = array(0, 0);
+
+        foreach ($listadoAsistentes as $r) { 
+            if ($r->comuna == "Comuna 1") $contadorComuna[1] = $contadorComuna[1] + 1;
+            if ($r->comuna == "Comuna 2") $contadorComuna[2] = $contadorComuna[2] + 1;
+            if ($r->comuna == "Comuna 3") $contadorComuna[3] = $contadorComuna[3] + 1;
+            if ($r->comuna == "Comuna 4") $contadorComuna[4] = $contadorComuna[4] + 1;
+            if ($r->comuna == "Comuna 5") $contadorComuna[5] = $contadorComuna[5] + 1;
+            if ($r->comuna == "Comuna 6") $contadorComuna[6] = $contadorComuna[6] + 1;
+            if ($r->comuna == "Comuna 7") $contadorComuna[7] = $contadorComuna[7] + 1;
+            if ($r->comuna == "Comuna 8") $contadorComuna[8] = $contadorComuna[8] + 1;
+            if ($r->comuna == "Comuna 9") $contadorComuna[9] = $contadorComuna[9] + 1;
+            if ($r->comuna == "Comuna 10") $contadorComuna[10] = $contadorComuna[10] + 1;
+            if ($r->comuna == "Comuna 11") $contadorComuna[11] = $contadorComuna[11] + 1;
+            if ($r->comuna == "Comuna 12") $contadorComuna[12] = $contadorComuna[12] + 1;
+            if ($r->comuna == "Alto El Nudo") $contadorComuna[13] = $contadorComuna[13] + 1;
+            if ($r->comuna == "Las Marcadas") $contadorComuna[14] = $contadorComuna[14] + 1;
+            if ($r->comuna == "Otro municipio") $contadorComuna[15] = $contadorComuna[15] + 1;
+
+            if ($r->zona == "Urbana") $contadorZona[0] = $contadorZona[0] + 1;
+            if ($r->zona == "Rural") $contadorZona[1] = $contadorZona[1] + 1;
+
+            if ($r->genero == "Masculino") $contadorGenero[0] = $contadorGenero[0] + 1;
+            if ($r->genero == "Femenino") $contadorGenero[1] = $contadorGenero[1] + 1;
+
+            if ($r->primera_infancia != "") $contadorCaracterizacion[0] = $contadorCaracterizacion[0] + 1;
+            if ($r->infancia != "") $contadorCaracterizacion[1] = $contadorCaracterizacion[1] + 1;
+            if ($r->adolescencia != "") $contadorCaracterizacion[2] = $contadorCaracterizacion[2] + 1;
+            if ($r->jovenes != "") $contadorCaracterizacion[3] = $contadorCaracterizacion[3] + 1;
+            if ($r->adultos != "") $contadorCaracterizacion[4] = $contadorCaracterizacion[4] + 1;
+            if ($r->adultos_mayores != "") $contadorCaracterizacion[5] = $contadorCaracterizacion[5] + 1;
+            if ($r->madres_comunitarias != "") $contadorCaracterizacion[6] = $contadorCaracterizacion[6] + 1;
+            if ($r->afrodescendientes != "") $contadorCaracterizacion[7] = $contadorCaracterizacion[7] + 1;
+            if ($r->mujer_cabeza_de_hogar != "") $contadorCaracterizacion[8] = $contadorCaracterizacion[8] + 1;
+            if ($r->estudiantes != "") $contadorCaracterizacion[9] = $contadorCaracterizacion[9] + 1;
+            if ($r->empresarios != "") $contadorCaracterizacion[10] = $contadorCaracterizacion[10] + 1;
+            if ($r->docentes != "") $contadorCaracterizacion[11] = $contadorCaracterizacion[11] + 1;
+            if ($r->persona_con_discapacidad != "") $contadorCaracterizacion[12] = $contadorCaracterizacion[12] + 1;
+            if ($r->victima_de_la_violencia != "") $contadorCaracterizacion[13] = $contadorCaracterizacion[13] + 1;
+            if ($r->indigenas != "") $contadorCaracterizacion[14] = $contadorCaracterizacion[14] + 1;
+            if ($r->migrados != "") $contadorCaracterizacion[15] = $contadorCaracterizacion[15] + 1;
+            if ($r->campesinos != "") $contadorCaracterizacion[16] = $contadorCaracterizacion[16] + 1;
+            if ($r->habitante_de_calle != "") $contadorCaracterizacion[17] = $contadorCaracterizacion[17] + 1;
+            if ($r->lideres_comunitarios != "") $contadorCaracterizacion[18] = $contadorCaracterizacion[18] + 1;
+            if ($r->lgtbi != "") $contadorCaracterizacion[19] = $contadorCaracterizacion[19] + 1;
+            if ($r->funcionarios != "") $contadorCaracterizacion[20] = $contadorCaracterizacion[20] + 1;
+            if ($r->contratistas != "") $contadorCaracterizacion[21] = $contadorCaracterizacion[21] + 1;
+            if ($r->comunidad_organizada != "") $contadorCaracterizacion[22] = $contadorCaracterizacion[22] + 1;
+
+            //if ($r->edad <= 10)
+            //if (($r->edad > 10) && ($r->edad <= 20))
+            //if (($r->edad > 20) && ($r->edad <= 30))
+            //if (($r->edad > 30) && ($r->edad <= 40))
+            //if (($r->edad > 40) && ($r->edad <= 50))
+            //if (($r->edad > 50) && ($r->edad <= 60))
+            //if (($r->edad > 60) && ($r->edad <= 70))
+            //if ($r->edad > 70)
+
+        }
         
         //Carga las vistas para presentar al usuario
         require_once 'view/header.view.php';
